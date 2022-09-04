@@ -168,7 +168,7 @@ const ViewQuestion = () => {
                 <Link className="link back-to-selection" to={"/selection"}>Trở Về Trang Đầu</Link> 
                 <div className='question'>
                     <div className='question-row'>
-                        <div>
+                        <div hidden>
                             <h5>Category {category}</h5>
                             <h5>Id: {currentQuestionId}</h5>
                         </div>
