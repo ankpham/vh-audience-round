@@ -6,7 +6,7 @@ import './style/style.css'
 
 import Home from './pages/Home';
 import Selection from './pages/Selection';
-import Round from './pages/Round';
+import ViewQuestion from './pages/ViewQuestion';
 
 function App() {
   const page = useRef(null);
@@ -29,7 +29,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>} exact/>
         <Route path="/selection" element={<Selection/>} exact/>
-        <Route path="/round/:round" element={<Round/>} exact/>
+        <Route path="/view-question/:category" element={<ViewQuestion/>} exact/>
       </Routes>
     </Router>
     <button ref={fullScreenButton} style={{right: '0', display: 'flex', position: 'absolute'}} onClick={() => fullscreen()}>Full Screen</button>

@@ -1,6 +1,6 @@
 @import url('home.css');
 @import url('selection.css');
-@import url('round.css');
+@import url('view-question.css');
 
 @import url('background-colors.css');
 @import url('border-colors.css');
@@ -52,6 +52,7 @@ body {
     padding: 10px;
     margin: 5px;
     transition: border .1s;
+    cursor: pointer;
 }
 
 .link:hover {
