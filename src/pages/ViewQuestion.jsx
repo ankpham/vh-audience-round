@@ -37,15 +37,22 @@ const ViewQuestion = () => {
         });
     }
 
-    const displayIcon = (questionLocation) => {
-        if (questionLocation === 'correct') {
-            correctElement.current.childNodes[1].classList.add('active-x-check');
+    const displayIcon = (questionLocation, isRemove) => {
+        if (isRemove) {
+            correctElement.current.childNodes[1].classList.remove('active-x-check');
+            wrongElement1.current.childNodes[1].classList.remove('active-x-check');
+            wrongElement2.current.childNodes[1].classList.remove('active-x-check');
         }
-        else if (questionLocation === 'wrong1') {
-            wrongElement1.current.childNodes[1].classList.add('active-x-check');
-        }
-        else if (questionLocation === 'wrong2') {
-            wrongElement2.current.childNodes[1].classList.add('active-x-check');
+        else {
+            if (questionLocation === 'correct') {
+                correctElement.current.childNodes[1].classList.add('active-x-check');
+            }
+            else if (questionLocation === 'wrong1') {
+                wrongElement1.current.childNodes[1].classList.add('active-x-check');
+            }
+            else if (questionLocation === 'wrong2') {
+                wrongElement2.current.childNodes[1].classList.add('active-x-check');
+            }
         }
     }
 
@@ -53,6 +60,7 @@ const ViewQuestion = () => {
     const pass = "0842-0983-ibjw-2q9w";
 
     const NextQuestion = () => {
+        displayIcon('current', 'remove')
         setCurrentQuestion(currentQuestion+1)
         let plcehldr = currentQuestion+1;
 
