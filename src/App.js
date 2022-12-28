@@ -24,7 +24,7 @@ function App() {
   }
 
   return (
-    <div ref={page} className="App">
+    <div ref={page} className="app">
     <Router>
       <Routes>
         <Route path="/" element={<Home/>} exact/>
@@ -32,6 +32,7 @@ function App() {
         <Route path="/view-question/:category" element={<ViewQuestion/>} exact/>
       </Routes>
     </Router>
+    {/*remove overflow hidden to add scrollbar and access full screen button*/}
     <button ref={fullScreenButton} style={{right: '0', display: 'flex', position: 'absolute'}} onClick={() => fullscreen()}>Full Screen</button>
     </div>
   );
