@@ -98,7 +98,7 @@ const ViewQuestion = () => {
 
     useEffect(()=> {
         if (currentQuestion === 0) {
-            axios.get(url + category,
+            axios.get(url + '4-' + category,
                 {auth: { username: user, password: pass}}
                 ).then((response) => {
                     setQuestionList(response.data);
