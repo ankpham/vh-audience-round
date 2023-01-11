@@ -89,12 +89,9 @@ body {
 }
 
 .link.back-to-selection {
-    position: absolute;
-    margin-left: 5%;
-    margin-bottom: 10%;
+    display: block;
+    float: left;
     font-size: 23px;
-    left: 0;
-    bottom: 0;
 }
 
 .link.admin {
