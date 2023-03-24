@@ -161,7 +161,7 @@ const ViewQuestion = () => {
                 })
             }
         }
-        if (currentQuestion >= 2) {
+        if (currentQuestion >= 4) {
             setnextButtonStyle({display: 'none'})
         }
     }, [currentQuestion, url, category, choices, reloadCounter]);
@@ -180,7 +180,7 @@ const ViewQuestion = () => {
                             {timerState}
                         </div>
                         <div className='question-number'>
-                            <h1>{currentQuestion+1}/3</h1>
+                            <h1>{currentQuestion+1}/5</h1>
                         </div>
                         <h1 ref={confetti} className='question-heading'>{question}</h1>
                     </div>
